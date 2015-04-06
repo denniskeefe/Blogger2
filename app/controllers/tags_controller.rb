@@ -5,10 +5,13 @@ class TagsController < ApplicationController
 end
 
 def index
-		@articles = Article.all
+		@tags = Tag.all
 	end
 
 def destroy
-		@articles = Article.all
+		@tag = Tag.find params[:id]
+		@tag.destroy
+		flash.notice = "Tag '#{@tag.name}' Deleted!"
+		redirect_to tags_path		
 	end
 end
