@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+
+
 <p>
   <strong>Username:</strong>
   <%= @author.username %>
@@ -9,6 +11,10 @@
   <strong>Email:</strong>
   <%= @author.email %>
 </p>
+
+<% if logged_in? %>
+
+<% end %>
 
 
 
